@@ -2,7 +2,7 @@ import express from "express";
 import morgan from "morgan";
 import cors from "cors";
 import dotenv from "dotenv";
-import connectDB from "./config/db.js"
+import connectDB from "./config/db.js";
 import productRoutes from "./routes/productRoutes.js";
 import specialPriceRoutes from "./routes/specialPriceRoutes.js";
 
@@ -20,19 +20,16 @@ const app = express();
 const corsOptions = {
   origin: function (origin, callback) {
     // Lista de dominios permitidos
-    const whiteList = [
-      'http://localhost:3000',
-      process.env.FRONTEND_URL
-    ];
+    const whiteList = ["http://localhost:3000", process.env.FRONTEND_URL];
 
     if (whiteList.indexOf(origin) !== -1 || !origin) {
       callback(null, true);
     } else {
-      callback(new Error('No permitido por CORS'));
+      callback(new Error("No permitido por CORS"));
     }
   },
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
-  allowedHeaders: ['Content-Type', 'Authorization']
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  allowedHeaders: ["Content-Type", "Authorization"],
 };
 
 app.use(cors(corsOptions));
@@ -51,10 +48,10 @@ app.use(`${BASE_PATH}/productos`, productRoutes);
 app.use(`${BASE_PATH}/precios-especiales`, specialPriceRoutes);
 
 // Middleware para manejar errores de producción
-if (NODE_ENV === 'production') {
+if (NODE_ENV === "poduction") {
   app.use((err, req, res, next) => {
     console.error(err.stack);
-    res.status(500).send('Algo salió mal en el servidor');
+    res.status(500).send("Algo salió mal en el servidor");
   });
 }
 
