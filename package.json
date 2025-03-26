@@ -1,0 +1,21 @@
+{
+  "name": "drenvio_challenge",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node backend/index.js",
+    "build": "cd frontend && npm run build",
+    "dev": "concurrently \"cd backend && nodemon index.js\" \"cd frontend && npm run dev\""
+  },
+  "keywords": [],
+  "author": "Simón Posada A",
+  "license": "ISC",
+  "description": "Este proyecto implementa una aplicación que muestra y gestiona precios especiales de productos para diferentes usuarios, utilizando React como frontend y una API de Node.js que interactúa con MongoDB.",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22",
+    "concurrently": "^8.2.0"
+  }
+}

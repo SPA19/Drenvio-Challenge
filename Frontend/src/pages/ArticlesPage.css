@@ -1,0 +1,26 @@
+.articles-page {
+  margin-bottom: 30px;
+}
+
+.articles-page h2 {
+  margin-bottom: 15px;
+  color: #2c3e50;
+}
+
+.user-info {
+  margin-bottom: 20px;
+  color: #7f8c8d;
+}
+
+.special-price-info {
+  background-color: #e8f4fd;
+  padding: 10px 15px;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  color: #2980b9;
+  font-size: 0.9rem;
+}
+
+.detail-article{
+  margin: 30px 0 0 5px;
+}

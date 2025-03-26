@@ -1,0 +1,37 @@
+.upload-page {
+  margin-bottom: 30px;
+}
+
+.upload-page h2 {
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+.tabs {
+  display: flex;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.tab-button {
+  padding: 10px 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #7f8c8d;
+  transition: all 0.3s ease;
+}
+
+.tab-button.active {
+  color: #3498db;
+  border-bottom: 2px solid #3498db;
+}
+
+.tab-button:hover:not(.active) {
+  color: #2c3e50;
+}
+
+.tab-content {
+  padding: 10px 0;
+}
